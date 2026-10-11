@@ -2,6 +2,8 @@
 
 Turn an AGENTS.md-style runbook from prose into a machine-checkable checklist. Lint it for the three properties agents need — numbered steps, explicit shell command blocks, and idempotency/verify markers — and track progress in a sidecar state file. If your agents follow written setup runbooks, this makes "did the runbook actually get followed" answerable; if your runbooks are one-liners, a checklist is overkill.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 The best local-first projects ship an `AGENTS.md` that reads like an executable script: numbered steps, exact commands, verifiable outcomes — installation documentation written so an agent can follow it. That pattern is powerful but unguarded: nothing stops a runbook from drifting into prose, missing commands, or steps with no observable success check. An agent mid-runbook after a crash has no idea which steps it already did.
